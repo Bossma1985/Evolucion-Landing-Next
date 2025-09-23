@@ -8,10 +8,20 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        "brand-red": "#FF0000", // Un rojo vivo
+        "brand-black": "#000000",
+        "brand-white": "#FFFFFF",
+        "brand-gray": "#E5E7EB", // Ajustado a un gris más notable
+      },
+      animation: {
+        "gradient-bg": "gradient-bg 15s ease infinite",
+      },
+      keyframes: {
+        "gradient-bg": {
+          "0%, 100%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+        },
       },
     },
   },
