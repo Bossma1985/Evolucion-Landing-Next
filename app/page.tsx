@@ -1,6 +1,7 @@
 import Header from "@/components/shared/header";
 import Hero from "@/components/landing/hero";
 import Features from "@/components/landing/features";
+import About from "@/components/landing/about";
 import Testimonials from "@/components/landing/testimonials";
 import Pricing from "@/components/landing/pricing";
 import FAQ from "@/components/landing/faq";
@@ -14,6 +15,7 @@ export default function Home() {
       <main>
         <Hero />
         <Features />
+        <About />
         <Testimonials />
         <Pricing />
         <FAQ />
