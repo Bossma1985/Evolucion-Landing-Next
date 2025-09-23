@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -24,9 +25,15 @@ const Hero = () => {
             resiliencia, superación y la prueba de que no existen límites cuando
             te niegas a rendirte.
           </p>
-          <button className="mt-8 bg-red-600 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-red-700 transition-all duration-300 transform hover:scale-105">
-            Comprar el libro
-          </button>
+          <Link href="/comprar">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="mt-8 bg-red-600 text-white font-bold py-3 px-8 rounded-lg text-lg transition-colors"
+            >
+              Comprar el libro
+            </motion.button>
+          </Link>
         </motion.div>
 
         <motion.div

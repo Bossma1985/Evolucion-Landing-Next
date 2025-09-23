@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Landing Page: Libro "Evolución"
 
-## Getting Started
+Esta es la landing page oficial para la promoción y venta del libro autobiográfico "Evolución" de Rafa Botella. El objetivo de este proyecto es presentar la historia de superación del autor de una manera visualmente atractiva y persuasiva.
 
-First, run the development server:
+## ✨ Características
+
+- **Diseño Moderno y Responsivo**: Totalmente adaptable a dispositivos móviles, tablets y ordenadores de escritorio.
+- **Animaciones Suaves**: Interacciones y animaciones elegantes creadas con Framer Motion para una experiencia de usuario fluida.
+- **Componentes Estructurados**: Arquitectura de componentes clara y mantenible siguiendo las mejores prácticas de Next.js.
+- **Optimización**: Enfocado en un buen rendimiento y tiempos de carga rápidos.
+
+## 🚀 Stack Tecnológico
+
+Este proyecto está construido con las siguientes tecnologías:
+
+- **Framework**: [Next.js](https://nextjs.org/) 14 (App Router)
+- **Lenguaje**: [TypeScript](https://www.typescriptlang.org/)
+- **Librería UI**: [React](https://reactjs.org/) 18
+- **Estilos**: [Tailwind CSS](https://tailwindcss.com/)
+- **Animaciones**: [Framer Motion](https://www.framer.com/motion/)
+- **Iconos**: [Lucide React](https://lucide.dev/)
+
+## 🛠️ Cómo Empezar
+
+Sigue estos pasos para ejecutar el proyecto en tu entorno local.
+
+### Prerrequisitos
+
+Asegúrate de tener instalado [Node.js](https://nodejs.org/) (versión 18 o superior) y [pnpm](https://pnpm.io/).
+
+### Instalación
+
+1.  Clona el repositorio (si aplica).
+2.  Instala las dependencias del proyecto:
+    ```bash
+    pnpm install
+    ```
+
+### Ejecutar el Servidor de Desarrollo
+
+Para iniciar el proyecto en modo de desarrollo, ejecuta el siguiente comando:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver la aplicación.

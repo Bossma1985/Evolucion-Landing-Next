@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Pricing = () => {
   const options = [
@@ -82,9 +83,15 @@ const Pricing = () => {
                   </li>
                 ))}
               </ul>
-              <button className="mt-8 bg-black text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-gray-800 transition-colors w-full">
-                {option.buttonText}
-              </button>
+              <Link
+                href={`/comprar?formato=${
+                  option.format === "Libro Físico" ? "fisico" : "ebook"
+                }`}
+              >
+                <button className="mt-8 bg-black text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-gray-800 transition-colors w-full">
+                  {option.buttonText}
+                </button>
+              </Link>
             </motion.div>
           ))}
         </div>

@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const CTA = () => {
   return (
@@ -18,13 +19,15 @@ const CTA = () => {
           perspectiva. Adquiere tu copia de "Evolución" hoy mismo y comienza tu
           propio viaje de superación.
         </p>
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="mt-8 bg-black text-white font-bold py-4 px-10 rounded-lg text-xl transition-colors"
-        >
-          Quiero mi copia ahora
-        </motion.button>
+        <Link href="/comprar">
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="mt-8 bg-black text-white font-bold py-4 px-10 rounded-lg text-xl transition-colors"
+          >
+            Quiero mi copia ahora
+          </motion.button>
+        </Link>
       </div>
     </motion.section>
   );

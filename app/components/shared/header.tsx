@@ -46,13 +46,15 @@ const Header = () => {
               {link.name}
             </Link>
           ))}
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-red-600 text-white font-bold py-2 px-6 rounded-lg text-md"
-          >
-            Comprar
-          </motion.button>
+          <Link href="/comprar">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-red-600 text-white font-bold py-2 px-6 rounded-lg text-md"
+            >
+              Comprar
+            </motion.button>
+          </Link>
         </nav>
         {/* TODO: Mobile Menu Button */}
         <div className="md:hidden">{/* Placeholder for hamburger icon */}</div>
