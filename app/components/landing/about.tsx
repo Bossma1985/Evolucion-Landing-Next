@@ -65,13 +65,6 @@ const About = () => {
               para siempre mientras el resto sigue girando.
             </p>
             <p>
-              Continúa narrando los desafíos que has enfrentado y, lo más
-              importante, cómo los has superado. El objetivo es transmitir el
-              mensaje central de &quot;Evolución&quot;: la resiliencia, la
-              fuerza interior y la capacidad de adaptarse y encontrar un nuevo
-              propósito.
-            </p>
-            <p>
               Cuando creía que había llegado al borde del mapa, encontré una
               brújula en el lugar más inesperado: la historia de la Inteligencia
               Artificial. Descubrí que el viaje de la IA, con sus sueños

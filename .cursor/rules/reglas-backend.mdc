@@ -1,0 +1,54 @@
+---
+description: "Define el stack tecnológico y las buenas prácticas para el desarrollo del backend, incluyendo la base de datos, el ORM y la estructura de las API Routes."
+---
+
+# Reglas y Stack Tecnológico para el Backend
+
+Este documento establece las directrices y las tecnologías seleccionadas para el desarrollo de toda la lógica del lado del servidor (backend) del proyecto "Evolución".
+
+## 1. Stack Tecnológico del Backend
+
+Para mantener la coherencia con el ecosistema de Vercel y Next.js, se ha seleccionado el siguiente stack:
+
+- **Base de Datos**: **Vercel Postgres**
+  - **Motivo**: Integración nativa con Vercel para un despliegue y gestión simplificados. Ofrece un plan gratuito generoso, ideal para el inicio del proyecto.
+- **ORM (Object-Relational Mapping)**: **Prisma**
+  - **Motivo**: Proporciona una forma moderna, segura y type-safe de interactuar con la base de datos desde TypeScript. Simplifica las consultas y la gestión del esquema.
+- **Capa de API**: **Next.js API Routes**
+  - **Motivo**: Permite construir el backend dentro del mismo proyecto de Next.js, facilitando el desarrollo y manteniendo una única base de código.
+
+## 2. Principios de Modelado de Datos (Prisma Schema)
+
+El esquema de la base de datos se definirá en el archivo `prisma/schema.prisma`.
+
+- **Nombres en Inglés y PascalCase**: Los modelos se nombrarán en inglés y con formato PascalCase. Ejemplo: `Order`, `Customer`.
+- **Campos en camelCase**: Los campos dentro de los modelos usarán camelCase. Ejemplo: `createdAt`, `customerName`.
+- **Tipos de Datos Explícitos**: Utilizar siempre los tipos de datos más específicos que ofrece Prisma (ej. `String`, `Int`, `DateTime`).
+- **Relaciones Claras**: Definir explícitamente las relaciones entre modelos (ej. `one-to-many`, `one-to-one`).
+
+## 3. Buenas Prácticas para API Routes
+
+- **Responsabilidad Única**: Cada ruta de API debe tener una única responsabilidad. Ejemplo: `api/create-order` se encarga solo de crear pedidos.
+- **Validación de Entradas**: **Nunca confiar en los datos del cliente**. Validar siempre los datos recibidos en el cuerpo (`body`) de la petición antes de procesarlos. Se pueden usar librerías como `zod` para una validación robusta.
+- **Estructura de Respuesta Consistente**: Todas las respuestas de la API deben seguir una estructura predecible:
+
+  ```json
+  // Respuesta exitosa
+  {
+    "success": true,
+    "data": { ... }
+  }
+
+  // Respuesta con error
+  {
+    "success": false,
+    "error": "Mensaje descriptivo del error."
+  }
+  ```
+
+- **Manejo de Errores Centralizado**: Utilizar bloques `try...catch` para capturar cualquier error inesperado y devolver una respuesta de error 500 (Error Interno del Servidor) genérica para no exponer detalles sensibles de la implementación.
+
+## 4. Seguridad
+
+- **Variables de Entorno**: **NUNCA** escribir credenciales, claves de API o la URL de la base de datos directamente en el código. Utilizar siempre variables de entorno a través de un archivo `.env.local`.
+- **Sanitización de Datos**: Aunque Prisma ayuda a prevenir inyecciones SQL, es una buena práctica asegurarse de que los datos no contengan scripts maliciosos si se van a renderizar en el frontend.

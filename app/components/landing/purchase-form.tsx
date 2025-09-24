@@ -33,10 +33,35 @@ const PurchaseFormComponent = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Datos del formulario:", formData);
-    setIsSubmitted(true);
+
+    try {
+      const response = await fetch("/api/create-order", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setIsSubmitted(true);
+      } else {
+        // Aquí podrías manejar errores que vengan del backend
+        alert(
+          "Hubo un error al procesar tu pedido. Por favor, inténtalo de nuevo."
+        );
+      }
+    } catch (error) {
+      // Manejo de errores de red o si el servidor no responde
+      console.error("Error al enviar el formulario:", error);
+      alert(
+        "No se pudo conectar con el servidor. Revisa tu conexión a internet."
+      );
+    }
   };
 
   if (isSubmitted) {
