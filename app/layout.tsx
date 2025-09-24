@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Evolución - La historia de Rafa Botella",
   description:
-    'La landing page oficial del libro autobiográfico "Evolución" de Rafa Botella. Una historia de superación, resiliencia e inspiración.',
+    "La landing page oficial del libro autobiográfico &quot;Evolución&quot; de Rafa Botella. Una historia de superación, resiliencia e inspiración.",
 };
 
 export default function RootLayout({

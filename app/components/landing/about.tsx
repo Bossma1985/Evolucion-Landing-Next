@@ -65,17 +65,24 @@ const About = () => {
               para siempre mientras el resto sigue girando.
             </p>
             <p>
+              Continúa narrando los desafíos que has enfrentado y, lo más
+              importante, cómo los has superado. El objetivo es transmitir el
+              mensaje central de &quot;Evolución&quot;: la resiliencia, la
+              fuerza interior y la capacidad de adaptarse y encontrar un nuevo
+              propósito.
+            </p>
+            <p>
               Cuando creía que había llegado al borde del mapa, encontré una
               brújula en el lugar más inesperado: la historia de la Inteligencia
               Artificial. Descubrí que el viaje de la IA, con sus sueños
               imposibles y sus duros inviernos, era un espejo de mi propia
               lucha. Este libro no es una historia sobre tecnología, es el
               relato de cómo un ser humano puede desmontar su propia mente y
-              reconstruirla pieza a pieza. En él comparto el "algoritmo de
-              resiliencia" que tuve que programar para no rendirme y los
-              "sistemas expertos" que diseñé para reconquistar mi vida. Es mi
-              mapa para navegar el caos y la prueba de que, a veces, la salida
-              se encuentra en los lugares que nunca habrías imaginado.
+              reconstruirla pieza a pieza. En él comparto el &quot;algoritmo de
+              resiliencia&quot; que tuve que programar para no rendirme y los
+              &quot;sistemas expertos&quot; que diseñé para reconquistar mi
+              vida. Es mi mapa para navegar el caos y la prueba de que, a veces,
+              la salida se encuentra en los lugares que nunca habrías imaginado.
             </p>
             <Link
               href="#pricing"

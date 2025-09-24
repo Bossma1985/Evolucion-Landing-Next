@@ -47,7 +47,9 @@ const Testimonials = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <p className="text-gray-700 italic">"{testimonial.quote}"</p>
+              <p className="text-gray-700 italic">
+                &quot;{testimonial.quote}&quot;
+              </p>
               <p className="mt-6 font-bold text-black">{testimonial.author}</p>
               <p className="text-sm text-gray-500">{testimonial.title}</p>
             </motion.div>

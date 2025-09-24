@@ -10,7 +10,7 @@ const PurchasePage = () => {
             Finaliza tu compra
           </h1>
           <p className="mt-4 text-xl text-gray-600">
-            Estás a un solo paso de empezar tu "Evolución".
+            Estás a un solo paso de empezar tu &quot;Evolución&quot;.
           </p>
         </div>
 

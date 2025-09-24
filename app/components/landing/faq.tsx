@@ -17,7 +17,7 @@ const FAQ = () => {
     {
       question: "¿El libro está disponible en formato físico y digital?",
       answer:
-        'Sí, "Evolución" está disponible tanto en formato físico (tapa blanda) como en formato eBook para que puedas leerlo en tu dispositivo preferido.',
+        "Sí, &quot;Evolución&quot; está disponible tanto en formato físico (tapa blanda) como en formato eBook para que puedas leerlo en tu dispositivo preferido.",
     },
     {
       question: "¿Cuánto tiempo tarda el envío?",

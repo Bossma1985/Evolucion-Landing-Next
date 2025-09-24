@@ -21,7 +21,7 @@ const Pricing = () => {
       format: "eBook (Digital)",
       price: "9,99€",
       description:
-        'Lleva "Evolución" contigo a todas partes. Lectura instantánea en tus dispositivos.',
+        "Lleva &quot;Evolución&quot; contigo a todas partes. Lectura instantánea en tus dispositivos.",
       features: [
         "Formatos EPUB, MOBI y PDF",
         "Acceso inmediato tras la compra",

@@ -16,8 +16,8 @@ const CTA = () => {
         <h2 className="text-4xl font-bold">¿Listo para evolucionar?</h2>
         <p className="mt-4 text-lg max-w-3xl mx-auto">
           No esperes más para descubrir una historia que cambiará tu
-          perspectiva. Adquiere tu copia de "Evolución" hoy mismo y comienza tu
-          propio viaje de superación.
+          perspectiva. Adquiere tu copia de &quot;Evolución&quot; hoy mismo y
+          comienza tu propio viaje de superación.
         </p>
         <Link href="/comprar">
           <motion.button
