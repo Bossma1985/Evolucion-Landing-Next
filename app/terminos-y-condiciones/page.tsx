@@ -20,11 +20,11 @@ const TerminosCondicionesPage = () => {
           </h2>
           <p className="mb-4">
             Los presentes Términos y Condiciones regulan el uso del sitio web{" "}
-            <strong>[Dominio de la web]</strong> (en adelante, "el Sitio Web"),
-            titularidad de Rafael Botella (en adelante, "el Titular"). La
-            utilización del Sitio Web atribuye la condición de usuario y supone
-            la aceptación plena y sin reservas de todas y cada una de las
-            disposiciones incluidas en este documento.
+            <strong>[Dominio de la web]</strong> (en adelante, &quot;el Sitio
+            Web&quot;), titularidad de Rafael Botella (en adelante, &quot;el
+            Titular&quot;). La utilización del Sitio Web atribuye la condición
+            de usuario y supone la aceptación plena y sin reservas de todas y
+            cada una de las disposiciones incluidas en este documento.
           </p>
 
           <h2 className="text-2xl font-bold text-black mt-8 mb-4">

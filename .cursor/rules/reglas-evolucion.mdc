@@ -213,6 +213,9 @@ Debes hacer las mejores preguntas posibles, pues es fundamental para comenzar co
 
 - Analytics setup
 
+- Se reemplazan las comillas dobles 
+no escapadas por entidades HTML (&quot;) para cumplir con las reglas de ESLint y permitir el despliegue en Vercel
+
 ## Comandos Útiles:
 
 ```bash
