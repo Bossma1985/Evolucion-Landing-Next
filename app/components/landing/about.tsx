@@ -33,14 +33,14 @@ const About = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
-      className="bg-gradient-to-b from-slate-100 to-white py-20 px-4"
+      className="bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white py-20 px-4"
     >
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-black sm:text-4xl">
+          <h2 className="text-3xl font-bold sm:text-4xl">
             Sobre mí, Rafa Botella
           </h2>
-          <p className="mt-4 text-lg text-gray-600">
+          <p className="mt-4 text-lg text-gray-300">
             El autor detrás de la historia.
           </p>
         </div>
@@ -52,7 +52,7 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-gray-700 space-y-6 text-base leading-relaxed"
+            className="text-gray-300 space-y-6 text-base leading-relaxed"
           >
             <p>
               Mi vida ha sido una guerra librada en dos frentes muy distintos.

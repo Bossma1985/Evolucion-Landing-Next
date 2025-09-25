@@ -76,14 +76,14 @@ const Features = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.15 }}
-                  className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-start space-x-4"
+                  className="bg-gray-900 p-6 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex items-start space-x-4"
                 >
                   <div className="mt-1 flex-shrink-0">{feature.icon}</div>
                   <div>
-                    <h3 className="text-lg font-bold text-black mb-1">
+                    <h3 className="text-lg font-bold text-zinc-200 mb-1">
                       {feature.title}
                     </h3>
-                    <p className="text-gray-700 text-sm">
+                    <p className="text-zinc-400 text-sm">
                       {feature.description}
                     </p>
                   </div>

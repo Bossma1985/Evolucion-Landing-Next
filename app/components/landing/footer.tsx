@@ -60,28 +60,28 @@ const Footer = () => {
             <h4 className="font-bold mb-4">Legal</h4>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/politica-de-privacidad"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Política de Privacidad
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/terminos-y-condiciones"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Términos de Servicio
-                </a>
+                  Términos y Condiciones
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/politica-de-cookies"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Política de Cookies
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
