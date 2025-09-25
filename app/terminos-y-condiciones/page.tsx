@@ -32,11 +32,11 @@ const TerminosCondicionesPage = () => {
           </h2>
           <p className="mb-4">
             A través de este Sitio Web, los usuarios pueden adquirir el libro
-            "Evolución" en formato físico o digital (eBook). Para realizar un
-            pedido, el usuario deberá seguir el procedimiento de compra online,
-            rellenar la información solicitada y realizar el pago. Una vez
-            completado el proceso, recibirá un correo electrónico de
-            confirmación.
+            &quot;Evolución&quot; en formato físico o digital (eBook). Para
+            realizar un pedido, el usuario deberá seguir el procedimiento de
+            compra online, rellenar la información solicitada y realizar el
+            pago. Una vez completado el proceso, recibirá un correo electrónico
+            de confirmación.
           </p>
           <p className="mb-4">
             Los precios de los productos son los indicados en el Sitio Web en el
@@ -48,11 +48,11 @@ const TerminosCondicionesPage = () => {
           </h2>
           <p className="mb-4">
             Todos los contenidos del Sitio Web, incluyendo textos, fotografías,
-            gráficos, imágenes, así como el libro "Evolución", son propiedad del
-            Titular o de terceros que han autorizado su uso, y están protegidos
-            por las leyes de propiedad intelectual. Queda estrictamente
-            prohibida su reproducción, distribución o transformación sin el
-            consentimiento expreso del Titular.
+            gráficos, imágenes, así como el libro &quot;Evolución&quot;, son
+            propiedad del Titular o de terceros que han autorizado su uso, y
+            están protegidos por las leyes de propiedad intelectual. Queda
+            estrictamente prohibida su reproducción, distribución o
+            transformación sin el consentimiento expreso del Titular.
           </p>
 
           <h2 className="text-2xl font-bold text-black mt-8 mb-4">
