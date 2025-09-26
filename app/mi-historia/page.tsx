@@ -21,6 +21,8 @@ import {
   User,
 } from "lucide-react";
 import Link from "next/link";
+import VideoSection from "@/components/landing/mi-historia/videos";
+import SectionTitle from "@/components/shared/SectionTitle";
 
 const MiHistoriaPage = () => {
   return (
@@ -51,9 +53,9 @@ const MiHistoriaPage = () => {
 
         {/* TIMELINE */}
         <section className="max-w-3xl mx-auto my-24 sm:my-32">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-16">
+          <SectionTitle className="text-center mb-16">
             El Viaje de una Vida
-          </h2>
+          </SectionTitle>
           <Timeline>
             <TimelineItem>
               <TimelineDot icon={User} />
@@ -141,9 +143,9 @@ const MiHistoriaPage = () => {
 
         {/* POR QUÉ EL LIBRO */}
         <section className="text-center bg-gray-900/50 rounded-2xl p-8 sm:p-16 my-24 sm:my-32 max-w-4xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6">
+          <SectionTitle className="mb-6">
             ¿Por Qué Escribí &quot;Evolución&quot;?
-          </h2>
+          </SectionTitle>
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             No escribí este libro para contar una tragedia. Lo escribí para
             compartir una victoria: la victoria de la voluntad sobre la
@@ -155,6 +157,8 @@ const MiHistoriaPage = () => {
             <Link href="/comprar">Descubre tu propia evolución</Link>
           </Button>
         </section>
+
+        <VideoSection />
       </main>
       <Footer />
     </div>
