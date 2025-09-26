@@ -77,12 +77,20 @@ const About = () => {
               vida. Es mi mapa para navegar el caos y la prueba de que, a veces,
               la salida se encuentra en los lugares que nunca habrías imaginado.
             </p>
-            <Link
-              href="#pricing"
-              className="inline-block mt-6 bg-red-600 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-red-700 transition-colors"
-            >
-              Descubre mi libro
-            </Link>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <Link
+                href="/comprar"
+                className="inline-block bg-red-600 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-red-700 transition-colors"
+              >
+                Comprar el libro
+              </Link>
+              <Link
+                href="/mi-historia"
+                className="inline-block bg-transparent border border-gray-400 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-red-600 hover:text-black hover:border-red-600 transition-colors"
+              >
+                Descubre mi historia
+              </Link>
+            </div>
           </motion.div>
 
           {/* Columna del Carrusel de Fotos */}
