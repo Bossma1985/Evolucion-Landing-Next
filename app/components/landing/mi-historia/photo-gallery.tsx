@@ -52,7 +52,7 @@ export const PhotoGallery = () => {
   }, []);
 
   return (
-    <section className="my-24 sm:my-32 flex flex-col items-center">
+    <section id="galeria" className="my-24 sm:my-32 flex flex-col items-center">
       <SectionTitle className="mb-16 text-center">
         Mi vida en imágenes
       </SectionTitle>

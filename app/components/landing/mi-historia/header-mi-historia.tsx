@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-const Header = () => {
+const HeaderMiHistoria = () => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -16,11 +16,11 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { name: "Características", href: "#features" },
-    { name: "Sobre mí", href: "#about" },
-    { name: "Testimonios", href: "#testimonials" },
-    { name: "Precios", href: "#pricing" },
-    { name: "Preguntas Frecuentes", href: "#faq" },
+    { name: "Galería", href: "#galeria" },
+    { name: "Timeline", href: "#timeline" },
+    { name: "Pilares", href: "#pilares" },
+    { name: "Algoritmo", href: "#algoritmo" },
+    { name: "Experiencias", href: "#experiencias" },
   ];
 
   return (
@@ -75,4 +75,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeaderMiHistoria;

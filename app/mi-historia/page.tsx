@@ -10,7 +10,7 @@ import {
   TimelineTime,
   TimelineTitle,
 } from "@/components/landing/mi-historia/timeline";
-import Header from "@/components/shared/header";
+import HeaderMiHistoria from "@/components/landing/mi-historia/header-mi-historia";
 import { Button } from "@/components/ui/button";
 import {
   HeartPulse,
@@ -23,11 +23,14 @@ import {
 import Link from "next/link";
 import VideoSection from "@/components/landing/mi-historia/videos";
 import SectionTitle from "@/components/shared/SectionTitle";
+import PilaresSection from "@/components/landing/mi-historia/pilares";
+import AlgoritmoSection from "@/components/landing/mi-historia/algoritmo";
+import CtaFinalSection from "@/components/landing/mi-historia/cta-final";
 
 const MiHistoriaPage = () => {
   return (
     <div className="bg-black text-white">
-      <Header />
+      <HeaderMiHistoria />
       <main className="container mx-auto px-4 py-20 pt-32">
         {/* HERO */}
         <section className="text-center max-w-4xl mx-auto">
@@ -52,7 +55,7 @@ const MiHistoriaPage = () => {
         <PhotoGallery />
 
         {/* TIMELINE */}
-        <section className="max-w-3xl mx-auto my-24 sm:my-32">
+        <section id="timeline" className="max-w-3xl mx-auto my-24 sm:my-32">
           <SectionTitle className="text-center mb-16">
             El Viaje de una Vida
           </SectionTitle>
@@ -142,7 +145,10 @@ const MiHistoriaPage = () => {
         </section>
 
         {/* POR QUÉ EL LIBRO */}
-        <section className="text-center bg-gray-900/50 rounded-2xl p-8 sm:p-16 my-24 sm:my-32 max-w-4xl mx-auto">
+        <section
+          id="legado"
+          className="text-center bg-gray-900/50 rounded-2xl p-8 sm:p-16 my-24 sm:my-32 max-w-4xl mx-auto"
+        >
           <SectionTitle className="mb-6">
             ¿Por Qué Escribí &quot;Evolución&quot;?
           </SectionTitle>
@@ -158,7 +164,13 @@ const MiHistoriaPage = () => {
           </Button>
         </section>
 
+        <PilaresSection />
+
+        <AlgoritmoSection />
+
         <VideoSection />
+
+        <CtaFinalSection />
       </main>
       <Footer />
     </div>
