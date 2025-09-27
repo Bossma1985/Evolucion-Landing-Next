@@ -3,6 +3,12 @@
 import { motion } from "framer-motion";
 import { Youtube } from "lucide-react";
 import SectionTitle from "@/components/shared/SectionTitle";
+import { Roboto } from "next/font/google";
+
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["700"],
+});
 
 const videos = [
   {
@@ -45,7 +51,7 @@ const videos = [
 
 const VideoSection = () => {
   return (
-    <section className="my-24 sm:my-32">
+    <section id="experiencias" className="my-24 sm:my-32">
       <div className="text-center max-w-4xl mx-auto mb-16">
         <SectionTitle className="flex items-center justify-center gap-4">
           <Youtube className="w-10 h-10 text-red-500" />
@@ -69,8 +75,11 @@ const VideoSection = () => {
           >
             {/* Columna de Título y Descripción */}
             <div className={index % 2 === 0 ? "md:order-1" : "md:order-2"}>
-              <h3 className="text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400 mb-4">
-                {video.title}
+              <h3
+                className={`text-2xl sm:text-3xl font-bold text-white mb-4 flex items-center gap-3 ${roboto.className}`}
+              >
+                <Youtube className="w-8 h-8 text-red-500 shrink-0" />
+                <span>{video.title}</span>
               </h3>
               <p className="text-gray-300 leading-relaxed">
                 {video.description}

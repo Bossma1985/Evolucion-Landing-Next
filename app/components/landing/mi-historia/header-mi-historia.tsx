@@ -32,16 +32,13 @@ const HeaderMiHistoria = () => {
         scrolled ? "bg-black/80 backdrop-blur-sm shadow-lg" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4 grid grid-cols-3 items-center h-20 text-white">
-        {/* Columna Izquierda: Logo */}
-        <div className="text-2xl font-bold justify-self-start">
+      <div className="container mx-auto px-4 flex justify-between items-center h-20 text-white">
+        <div className="text-2xl font-bold">
           <Link href="/">
             <span className="text-red-600">Evolución</span>
           </Link>
         </div>
-
-        {/* Columna Central: Navegación */}
-        <nav className="hidden md:flex items-center space-x-2 justify-self-center">
+        <nav className="hidden md:flex items-center space-x-1 absolute left-1/2 -translate-x-1/2">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -52,9 +49,7 @@ const HeaderMiHistoria = () => {
             </Link>
           ))}
         </nav>
-
-        {/* Columna Derecha: Botón Comprar */}
-        <div className="hidden md:flex justify-self-end">
+        <div className="hidden md:flex">
           <Link href="/comprar">
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -65,11 +60,8 @@ const HeaderMiHistoria = () => {
             </motion.button>
           </Link>
         </div>
-
-        {/* Menú Móvil (a la derecha) */}
-        <div className="md:hidden col-start-3 justify-self-end">
-          {/* Placeholder for hamburger icon */}
-        </div>
+        {/* TODO: Mobile Menu Button */}
+        <div className="md:hidden">{/* Placeholder for hamburger icon */}</div>
       </div>
     </motion.header>
   );
