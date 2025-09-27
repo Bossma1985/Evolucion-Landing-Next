@@ -41,6 +41,9 @@ importers:
       react-dom:
         specifier: ^18
         version: 18.3.1(react@18.3.1)
+      react-lite-youtube-embed:
+        specifier: ^2.5.6
+        version: 2.5.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       tailwind-merge:
         specifier: ^3.3.1
         version: 3.3.1
@@ -1804,6 +1807,12 @@ packages:
 
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
+
+  react-lite-youtube-embed@2.5.6:
+    resolution: {integrity: sha512-gbV2SCpAqZOJ/p8wsIbXahONtX3ofh7WZfOR9pCK5kXEbDhTh+bFTOT/fyE+v3ZP4loQkZRqfp8H67gEcGz74w==}
+    peerDependencies:
+      react: '>=18.2.0'
+      react-dom: '>=18.2.0'
 
   react-remove-scroll-bar@2.3.8:
     resolution: {integrity: sha512-9r+yi9+mgU33AKcj6IbT9oRCO78WriSj6t/cF8DWBZJ9aOGPOTEDvdUDz1FwKim7QXWwmHqtdHnRJfhAxEG46Q==}
@@ -4031,6 +4040,11 @@ snapshots:
       scheduler: 0.23.2
 
   react-is@16.13.1: {}
+
+  react-lite-youtube-embed@2.5.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+    dependencies:
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
   react-remove-scroll-bar@2.3.8(@types/react@18.3.24)(react@18.3.1):
     dependencies:

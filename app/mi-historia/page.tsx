@@ -27,6 +27,7 @@ import PilaresSection from "@/components/landing/mi-historia/pilares";
 import AlgoritmoSection from "@/components/landing/mi-historia/algoritmo";
 import CtaFinalSection from "@/components/landing/mi-historia/cta-final";
 import PorqueEscribiSection from "@/components/landing/mi-historia/porque-escribi";
+import FragmentDialog from "@/components/landing/mi-historia/fragment-dialog";
 
 const MiHistoriaPage = () => {
   return (
@@ -47,9 +48,11 @@ const MiHistoriaPage = () => {
             <Button asChild size="lg">
               <Link href="/comprar">Quiero mi ejemplar</Link>
             </Button>
-            <Button asChild size="lg" variant="outline">
-              <Link href="/#about">Leer un fragmento</Link>
-            </Button>
+            <FragmentDialog>
+              <Button size="lg" variant="outline">
+                Leer un fragmento
+              </Button>
+            </FragmentDialog>
           </div>
         </section>
 

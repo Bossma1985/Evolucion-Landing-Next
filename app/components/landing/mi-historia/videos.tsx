@@ -1,14 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Youtube } from "lucide-react";
+import LiteYouTubeEmbed from "react-lite-youtube-embed";
+import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 import SectionTitle from "@/components/shared/SectionTitle";
-import { Roboto } from "next/font/google";
-
-const roboto = Roboto({
-  subsets: ["latin"],
-  weight: ["700"],
-});
 
 const videos = [
   {
@@ -31,21 +26,21 @@ const videos = [
   },
   {
     id: "yKlhUHkXTnA",
-    title: "Conversaciones que Inspiran",
+    title: "Primera Dominator",
     description:
-      "Mi historia no es solo mía; pertenece a todos aquellos que alguna vez se han sentido perdidos, rotos o sin esperanza. En esta charla, abro mi corazón para compartir las lecciones más profundas que he aprendido en mi viaje desde la oscuridad. Hablo sobre la resiliencia no como un don, sino como un músculo que se entrena día a día. Es una conversación honesta sobre el dolor, la aceptación y la búsqueda incansable de un propósito. Mi objetivo es encender una chispa en quien me escucha, recordarles que dentro de cada uno de nosotros reside una fuerza extraordinaria esperando ser descubierta.",
+      "En este vídeo, quiero compartir con vosotros una de las mejores experiencias de mi vida: mi viaje al festival Dominator en 2015. Desde la emoción en el aeropuerto de camino a Eindhoven, sabía que iba a ser legendario. Nada me detiene cuando se trata de mi pasión, y estar allí, frente a ese escenario brutal, fue un sueño cumplido.Viví cada segundo al máximo, rodeado de amigos y de la increíble energía de miles de personas. Pude disfrutar de DJs como Mad Dog y Korsakoff, sintiendo la potencia del hardcore en primera fila. Este vídeo es mi recuerdo personal, la prueba de que no hay barreras para la música. Fue una locura inolvidable, una demostración de pura adrenalina y libertad.",
   },
   {
     id: "zoT4FlVM2iE",
-    title: "Detrás de las Páginas de 'Evolución'",
+    title: "Masters of Hardcore - Riders of Rampage",
     description:
-      "Escribir 'Evolución' fue un acto de catarsis y un desafío monumental. En este vídeo, ofrezco una mirada íntima al proceso creativo detrás del libro. No fue solo sentarse a teclear; fue revivir cada momento, desde los más oscuros hasta los más luminosos, y encontrar las palabras exactas para transmitir la esencia de mi viaje. Comparto las herramientas que utilicé, los bloqueos que enfrenté y la motivación que me impulsó a seguir adelante. Es la historia de cómo mis vivencias se transformaron en un legado de tinta y papel, con la esperanza de que sirva como mapa para otros.",
+      "¡Qué noche vivimos en Masters of Hardcore 2016! En este vídeo, os comparto mi experiencia en el festival, donde Miss K8 lideraba la carga como la diosa del hardcore. La energía era palpable mientras nos preparábamos para la victoria, y yo estaba allí, inmerso en la multitud, sintiendo cada beat.El ambiente era increíble, con miles de personas unidas por el amor al hardcore, gritando Masters of Hardcore. Las luces, los visuales y la música crearon una experiencia inolvidable. Era como si el mundo nunca viera venir la fuerza de la visión que estábamos viviendo. Juntos, nos levantamos, juntos era nuestro momento. No hay nada como ser parte de algo tan potente, con los Riders of Rampage a mi alrededor. Este fue el Masters of Hardcore, y yo estuve allí para vivirlo.",
   },
   {
     id: "GpUB3aDvPeE",
-    title: "Diario de un Salto al Vacío",
+    title: "Mi vida, mis adaptaciones",
     description:
-      "¿Qué se siente al borde del abismo, a punto de dejarte caer? Es una mezcla de miedo primario y una euforia indescriptible. Este vídeo es un diario personal, una crónica de los pensamientos y emociones que recorren mi mente antes, durante y después de un salto. Es un recordatorio de que enfrentar nuestros mayores miedos es lo que nos hace sentir verdaderamente vivos. Cada caída es un renacimiento, una oportunidad para dejar atrás el peso del pasado y abrazar el presente con una intensidad abrumadora. Es mi forma de recordarme que la vida se vive al límite.",
+      "En este vídeo, os muestro cómo es mi día a día. Para mí, la vida es un reto constante, pero gracias a mi silla de ruedas y a las adaptaciones, puedo moverme y realizar muchas actividades. Me veis preparándome para el día con la ayuda de otros, lo que es fundamental. También me veis utilizando la tecnología para interactuar con mi entorno, abriendo puertas y controlando cosas con un dispositivo de mando.Salgo de casa y me desplazo por las calles con mi silla de ruedas, incluso por la noche, lo que me da una gran independencia. Regreso a casa, entro en mi ascensor adaptado y me relajo viendo un partido de fútbol. Es mi forma de vivir, adaptándome y superando cada día, demostrando que con apoyo y determinación, puedo hacer muchas cosas.",
   },
 ];
 
@@ -54,7 +49,7 @@ const VideoSection = () => {
     <section id="experiencias" className="my-24 sm:my-32">
       <div className="text-center max-w-4xl mx-auto mb-16">
         <SectionTitle className="flex items-center justify-center gap-4">
-          <Youtube className="w-10 h-10 text-red-500" />
+          <span className="w-10 h-10 text-red-500">▶</span>
           Experiencias
         </SectionTitle>
         <p className="text-lg text-gray-400 mt-4">
@@ -63,44 +58,23 @@ const VideoSection = () => {
         </p>
       </div>
 
-      <div className="space-y-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
         {videos.map((video, index) => (
           <motion.div
-            key={video.id}
-            initial={{ opacity: 0, y: 50 }}
+            key={index}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: index * 0.2 }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center"
+            transition={{ duration: 0.7, delay: index * 0.2 }}
           >
-            {/* Columna de Título y Descripción */}
-            <div className={index % 2 === 0 ? "md:order-1" : "md:order-2"}>
-              <h3
-                className={`text-2xl sm:text-3xl font-bold text-white mb-4 flex items-center gap-3 ${roboto.className}`}
-              >
-                <Youtube className="w-8 h-8 text-red-500 shrink-0" />
-                <span>{video.title}</span>
-              </h3>
-              <p className="text-gray-300 leading-relaxed">
-                {video.description}
-              </p>
+            <div className="mb-4 aspect-video overflow-hidden rounded-xl">
+              <LiteYouTubeEmbed id={video.id} title={video.title} />
             </div>
-
-            {/* Columna de Vídeo */}
-            <div
-              className={`aspect-video rounded-xl overflow-hidden shadow-2xl ${
-                index % 2 === 0 ? "md:order-2" : "md:order-1"
-              }`}
-            >
-              <iframe
-                src={`https://www.youtube.com/embed/${video.id}`}
-                title={video.title}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              ></iframe>
-            </div>
+            <h3 className="text-xl font-bold mb-2 flex items-center">
+              <span className="text-red-500 mr-2">►</span>
+              {video.title}
+            </h3>
+            <p className="text-gray-400">{video.description}</p>
           </motion.div>
         ))}
       </div>
