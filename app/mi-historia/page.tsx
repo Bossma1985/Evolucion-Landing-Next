@@ -26,6 +26,7 @@ import SectionTitle from "@/components/shared/SectionTitle";
 import PilaresSection from "@/components/landing/mi-historia/pilares";
 import AlgoritmoSection from "@/components/landing/mi-historia/algoritmo";
 import CtaFinalSection from "@/components/landing/mi-historia/cta-final";
+import PorqueEscribiSection from "@/components/landing/mi-historia/porque-escribi";
 
 const MiHistoriaPage = () => {
   return (
@@ -145,24 +146,7 @@ const MiHistoriaPage = () => {
         </section>
 
         {/* POR QUÉ EL LIBRO */}
-        <section
-          id="legado"
-          className="text-center bg-gray-900/50 rounded-2xl p-8 sm:p-16 my-24 sm:my-32 max-w-4xl mx-auto"
-        >
-          <SectionTitle className="mb-6">
-            ¿Por Qué Escribí &quot;Evolución&quot;?
-          </SectionTitle>
-          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            No escribí este libro para contar una tragedia. Lo escribí para
-            compartir una victoria: la victoria de la voluntad sobre la
-            adversidad. Es un manual para quien busca una razón para seguir, una
-            chispa de esperanza en la oscuridad. Es mi forma de decirte:
-            &quot;Si yo pude, tú también puedes&quot;.
-          </p>
-          <Button asChild size="lg">
-            <Link href="/comprar">Descubre tu propia evolución</Link>
-          </Button>
-        </section>
+        <PorqueEscribiSection />
 
         <PilaresSection />
 

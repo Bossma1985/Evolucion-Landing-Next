@@ -18,9 +18,11 @@ const HeaderMiHistoria = () => {
   const navLinks = [
     { name: "Galería", href: "#galeria" },
     { name: "Timeline", href: "#timeline" },
+    { name: "Legado", href: "#legado" },
     { name: "Pilares", href: "#pilares" },
     { name: "Algoritmo", href: "#algoritmo" },
     { name: "Experiencias", href: "#experiencias" },
+    { name: "Extractos", href: "#cta-final" },
   ];
 
   return (
