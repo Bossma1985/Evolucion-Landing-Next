@@ -62,7 +62,8 @@ const Features = () => {
           {/* Columna Derecha: Características */}
           <div>
             <h2 className="text-3xl font-bold text-black sm:text-4xl text-center lg:text-left">
-              ¿Qué encontrarás en &quot;Evolución&quot;?
+              ¿Qué encontrarás en{" "}
+              <span className="text-red-600">Evolución</span>?
             </h2>
             <p className="mt-4 text-lg text-gray-600 text-center lg:text-left">
               Cuatro pilares que hacen de este libro una experiencia

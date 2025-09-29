@@ -26,7 +26,8 @@ const CtaFinalSection = () => {
         className="relative z-10 max-w-3xl mx-auto"
       >
         <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">
-          ¿Listo para empezar tu propia Evolución?
+          ¿Listo para empezar tu propia{" "}
+          <span className="text-red-600 text-5xl sm:text-6xl">Evolución</span>?
         </h2>
         <p className="text-xl text-gray-300 mb-10">
           Mi historia es la prueba de que los límites solo existen en la mente.

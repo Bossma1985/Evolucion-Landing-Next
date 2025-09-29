@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
+import { FaYoutube } from "react-icons/fa";
 import SectionTitle from "@/components/shared/SectionTitle";
 
 const videos = [
@@ -49,7 +50,7 @@ const VideoSection = () => {
     <section id="experiencias" className="my-24 sm:my-32">
       <div className="text-center max-w-4xl mx-auto mb-16">
         <SectionTitle className="flex items-center justify-center gap-4">
-          <span className="w-10 h-10 text-red-500">▶</span>
+          <FaYoutube className="w-8 h-8 text-red-500" />
           Experiencias
         </SectionTitle>
         <p className="text-lg text-gray-400 mt-4">
@@ -71,7 +72,7 @@ const VideoSection = () => {
               <LiteYouTubeEmbed id={video.id} title={video.title} />
             </div>
             <h3 className="text-xl font-bold mb-2 flex items-center">
-              <span className="text-red-500 mr-2">►</span>
+              <FaYoutube className="text-red-500 mr-2" />
               {video.title}
             </h3>
             <p className="text-gray-400">{video.description}</p>

@@ -6,14 +6,98 @@ import Link from "next/link";
 
 const About = () => {
   const images = [
-    "/imagenes/carrusel/casaviejapc.JPG",
-    "/imagenes/carrusel/gladio.jpg",
-    "/imagenes/carrusel/missk8.jpg",
-    "/imagenes/carrusel/paraca.JPG",
-    "/imagenes/carrusel/dominator.jpg",
-    "/imagenes/carrusel/primos.jpg",
-    "/imagenes/carrusel/cumplefe.JPG",
-    "/imagenes/carrusel/campus.JPG",
+    {
+      src: "/imagenes/carrusel/parking_central.jpg",
+      description: "El parking la central, momentos sagrados.",
+    },
+    {
+      src: "/imagenes/carrusel/reportaje.jpg",
+      description: "Un momento capturado para la historia.",
+    },
+    {
+      src: "/imagenes/carrusel/mercedesf1.jpg",
+      description: "El mundo de la Fórmula 1, velocidad pura.",
+    },
+    {
+      src: "/imagenes/carrusel/Martina.jpg",
+      description: "Con Martina, momentos especiales.",
+    },
+    {
+      src: "/imagenes/carrusel/mas_amigos.jpg",
+      description: "Más amigos, más recuerdos, más vida.",
+    },
+    {
+      src: "/imagenes/carrusel/mariscada.jpg",
+      description: "Una mariscada, compartiendo con los míos.",
+    },
+    {
+      src: "/imagenes/carrusel/handbike.jpg",
+      description: "Mi handbike, mi forma de mantenerme activo.",
+    },
+    {
+      src: "/imagenes/carrusel/Javi_boss.jpg",
+      description: "Con Javi, el jefe.",
+    },
+    {
+      src: "/imagenes/carrusel/grua.jpg",
+      description: "La grúa, herramienta de trabajo y vida.",
+    },
+    {
+      src: "/imagenes/carrusel/grupo_amigos.jpg",
+      description: "Mi grupo de amigos, mi segunda familia.",
+    },
+    {
+      src: "/imagenes/carrusel/Dori.jpg",
+      description: "Con Dori, momentos entrañables.",
+    },
+    {
+      src: "/imagenes/carrusel/familia_cristel.jpg",
+      description: "La familia de Cristel, parte de mi historia.",
+    },
+    {
+      src: "/imagenes/carrusel/gogos-central.jpg",
+      description: "Los gogos del Central, música en vivo.",
+    },
+    {
+      src: "/imagenes/carrusel/box_lcr.jpg",
+      description: "En el box LCR, mundo del motociclismo.",
+    },
+    {
+      src: "/imagenes/carrusel/campus_con_marc.jpg",
+      description: "En el campus con Marc, compartiendo experiencias.",
+    },
+    {
+      src: "/imagenes/carrusel/careta_angerfist.jpg",
+      description: "La careta de Angerfist, símbolo del hardcore.",
+    },
+    {
+      src: "/imagenes/carrusel/central_salida.jpg",
+      description: "La salida del Central, después de la fiesta.",
+    },
+    {
+      src: "/imagenes/carrusel/comida.jpg",
+      description: "Momento de comida, compartiendo mesa.",
+    },
+    {
+      src: "/imagenes/carrusel/Bailecito_La_Fe.jpg",
+      description: "Bailecito en La Fe, música y diversión.",
+    },
+    {
+      src: "/imagenes/carrusel/avion.jpg",
+      description: "El avión, mi transporte hacia la libertad.",
+    },
+    {
+      src: "/imagenes/carrusel/amigos1.jpg",
+      description: "Con amigos, los mejores momentos.",
+    },
+    {
+      src: "/imagenes/carrusel/Aitana_saxo.jpeg",
+      description: "Con Aitana y su saxo, música en familia.",
+    },
+    {
+      src: "/imagenes/carrusel/Abel.jpg",
+      description: "Con Abel, amistad verdadera.",
+    },
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -21,7 +105,7 @@ const About = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000); // Cambia cada 5 segundos
+    }, 5000);
 
     return () => clearInterval(timer);
   }, [images.length]);
@@ -46,7 +130,6 @@ const About = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          {/* Columna de Texto */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -54,16 +137,6 @@ const About = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-gray-300 space-y-6 text-base leading-relaxed"
           >
-            <p>
-              Mi vida ha sido una guerra librada en dos frentes muy distintos.
-              La primera fue una batalla por la libertad: años de adolescencia
-              vividos al límite, quemando rueda en una moto y buscando mi
-              identidad en la oscuridad de las discotecas. La segunda, tras un
-              accidente que me dejó tetrapléjico, fue mucho más silenciosa y
-              brutal. Fue una guerra contra el estancamiento, contra un enemigo
-              que no puedes golpear: el de sentir que tu mundo se ha detenido
-              para siempre mientras el resto sigue girando.
-            </p>
             <p>
               Cuando creía que había llegado al borde del mapa, encontré una
               brújula en el lugar más inesperado: la historia de la Inteligencia
@@ -93,33 +166,48 @@ const About = () => {
             </div>
           </motion.div>
 
-          {/* Columna del Carrusel de Fotos */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative w-full h-[450px] rounded-xl overflow-hidden shadow-2xl"
+            className="relative w-full"
           >
-            <AnimatePresence>
-              <motion.div
-                key={currentImageIndex}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 1.5 }} // Transición suave de 1.5s
-                className="absolute inset-0"
-              >
-                <Image
-                  src={images[currentImageIndex]}
-                  alt={`Foto de Rafa Botella ${currentImageIndex + 1}`}
-                  layout="fill"
-                  objectFit="cover"
-                  placeholder="blur"
-                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/+F9PQAI8wNPvd7POQAAAABJRU5ErkJggg=="
-                />
-              </motion.div>
-            </AnimatePresence>
+            <div className="mb-6 text-center">
+              <AnimatePresence mode="wait">
+                <motion.p
+                  key={currentImageIndex}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.5 }}
+                  className="text-lg text-gray-300"
+                >
+                  {images[currentImageIndex].description}
+                </motion.p>
+              </AnimatePresence>
+            </div>
+            <div className="relative w-full h-[450px] rounded-xl overflow-hidden shadow-2xl bg-black">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentImageIndex}
+                  initial={{ opacity: 0, scale: 1.05 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  transition={{ duration: 0.6, ease: "easeInOut" }}
+                  className="absolute inset-0"
+                >
+                  <Image
+                    src={images[currentImageIndex].src}
+                    alt={`Foto de Rafa Botella ${currentImageIndex + 1}`}
+                    fill
+                    style={{ objectFit: "cover" }}
+                    placeholder="blur"
+                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/+F9PQAI8wNPvd7POQAAAABJRU5ErkJggg=="
+                  />
+                </motion.div>
+              </AnimatePresence>
+            </div>
           </motion.div>
         </div>
       </div>

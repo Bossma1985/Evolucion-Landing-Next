@@ -46,8 +46,8 @@ const Hero = () => {
             <Image
               src="/imagenes/autor/yo_pc.jpg"
               alt="Rafa Botella escribiendo en su ordenador adaptado"
-              layout="fill"
-              objectFit="cover"
+              fill
+              style={{ objectFit: "cover" }}
               className="brightness-90"
             />
           </div>

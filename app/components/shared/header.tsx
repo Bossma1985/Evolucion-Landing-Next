@@ -3,18 +3,28 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import useScrollPosition from "@/hooks/use-scroll-position";
+import useSmoothScroll from "@/hooks/use-smooth-scroll";
 
 const Header = () => {
   const scrolled = useScrollPosition(20);
+  const scrollToElement = useSmoothScroll(80); // 80px de offset para el header
 
   const navLinks = [
-    { name: "Características", href: "#features" },
     { name: "Contenido", href: "#features" },
     { name: "Sobre mí", href: "#about" },
     { name: "Testimonios", href: "#testimonials" },
     { name: "Precios", href: "#pricing" },
     { name: "Preguntas Frecuentes", href: "#faq" },
   ];
+
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    e.preventDefault();
+    const elementId = href.replace("#", "");
+    scrollToElement(elementId);
+  };
 
   return (
     <motion.header
@@ -36,6 +46,7 @@ const Header = () => {
             <Link
               key={link.name}
               href={link.href}
+              onClick={(e) => handleNavClick(e, link.href)}
               className="px-3 py-2 rounded-md hover:bg-white/10 hover:text-red-600 transition-all duration-300"
             >
               {link.name}
