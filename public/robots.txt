@@ -1,0 +1,6 @@
+# Le dice a todos los robots que pueden rastrear el sitio completo
+User-agent: *
+Allow: /
+
+# Le indica a los robots dónde encontrar el mapa del sitio (sitemap)
+Sitemap: https://www.ejemplo.com/sitemap.xml

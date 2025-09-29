@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.ejemplo.com/</loc>
+    <lastmod>2025-09-28</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://www.ejemplo.com/mi-historia</loc>
+    <lastmod>2025-09-28</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.ejemplo.com/comprar</loc>
+    <lastmod>2025-09-28</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.ejemplo.com/terminos-y-condiciones</loc>
+    <lastmod>2025-09-28</lastmod>
+    <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>https://www.ejemplo.com/politica-de-privacidad</loc>
+    <lastmod>2025-09-28</lastmod>
+    <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>https://www.ejemplo.com/politica-de-cookies</loc>
+    <lastmod>2025-09-28</lastmod>
+    <priority>0.50</priority>
+  </url>
+</urlset>

@@ -1,19 +1,11 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUp } from "lucide-react";
+import useScrollPosition from "@/hooks/use-scroll-position";
 
 const ScrollToTopButton = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  const toggleVisibility = () => {
-    if (window.pageYOffset > 300) {
-      setIsVisible(true);
-    } else {
-      setIsVisible(false);
-    }
-  };
+  const isVisible = useScrollPosition(300);
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -21,13 +13,6 @@ const ScrollToTopButton = () => {
       behavior: "smooth",
     });
   };
-
-  useEffect(() => {
-    window.addEventListener("scroll", toggleVisibility);
-    return () => {
-      window.removeEventListener("scroll", toggleVisibility);
-    };
-  }, []);
 
   return (
     <AnimatePresence>
